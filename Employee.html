@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Employee CRUD Operations</title>
+    <script src ="js/EmployeeService.js"></script>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Employee Directory</h1>
+    </div>
+    <div >
+        <form id="add">
+            <h2>Add/Update An Employee</h2>         
+            <label for="ID">ID</label>
+            <input type="number"  name="ID">
+            <label for="Name">Name</label>
+            <input type="text"  name="Name">
+            <label for="Salary">Salary</label>
+            <input type="number"  name="Salary">           
+        </form>
+        <button type="button" onclick="addEmployee()">Add </button>
+        <button type="button" onclick="updateEmployee()">Update </button>
+        <p id = "add text"></p>
+    </div>
+
+    <div >
+        <form id="remove">
+            <br>
+            <h2>Remove/Get An Employee By Id</h2>         
+            <label for="Employee ID">Employee ID</label><br>
+            <input type="number"  name="Employee ID"><br>
+            <button type="button" onclick="removeEmployee()">Remove </button>
+            <button type="button" onclick="getEmployeeById()">Get </button>
+            <p id = "remove text"></p>
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <br>
+            <h2>Sort Employees</h2> 
+            <label for="sorting">Choose the attribute to sort</label><br>
+            <select id="sorting" name="sorting">
+                <option value="Id">Id</option>
+                <option value="Name">Name</option>
+                <option value="Salary">Salary</option>
+              </select>
+            <button type="button" onclick="sortEmployee()"> Sort </button>
+            <p id="sort text"</p>
+          </form>
+    </div>
+    <div>
+        <br>
+        <h2>Get Employee List</h2>
+        <button type="button" onclick="getEmployees()">Get All</button>
+        <p id ="get text"></p>
+    </div>
+</body>
+</html>
